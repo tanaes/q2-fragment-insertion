@@ -1,0 +1,105 @@
+IQ-TREE multicore version 1.7-beta3 for Linux 64-bit built Oct  9 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    barnacle.ucsd.edu (AVX2, FMA3, 125 GB RAM)
+Command: /home/jgsanders/git_sw/IQ-TREE/bin/iqtree-1.7-beta3-Linux/bin/iqtree -nt 1 -redo -s ./phylogeny_constraint/data/test_otus.aln.fasta -m TIM2+I+G -g ./phylogeny_constraint/data/bad.constraint.tre -pre ./phylogeny_constraint/data/test_sequences.sepp.subtree.only.constrained
+Seed:    557235 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Oct 10 08:42:04 2018
+Kernel:  AVX+FMA - 1 threads (24 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 24 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file ./phylogeny_constraint/data/test_otus.aln.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 11 sequences with 150 columns, 17 distinct patterns
+11 parsimony-informative, 3 singleton sites, 136 constant sites
+          Gap/Ambiguity  Composition  p-value
+   1  denovo0     0.00%    passed     99.93%
+   2  denovo1     0.00%    passed     97.42%
+   3  denovo10    0.00%    passed     99.79%
+   4  denovo2     0.00%    passed     99.93%
+   5  denovo3     0.00%    passed     99.07%
+   6  denovo4     0.00%    passed     98.67%
+   7  denovo5     0.00%    passed     99.82%
+   8  denovo6     0.00%    passed     99.91%
+   9  denovo7     0.00%    passed     98.90%
+  10  denovo8     0.00%    passed     99.91%
+  11  denovo9     0.00%    passed     98.03%
+****  TOTAL       0.00%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+Reading constraint tree ./phylogeny_constraint/data/bad.constraint.tre...
+Creating fast initial parsimony tree by random order stepwise addition...
+0.002 seconds, parsimony score: 24 (based on 14 sites)
+
+NOTE: 0 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 1.000 / Estimate: 0.000, 0.020 / LogL: -320.498
+Init pinv, alpha: 0.101, 1.000 / Estimate: 0.112, 0.020 / LogL: -319.694
+Init pinv, alpha: 0.201, 1.000 / Estimate: 0.220, 0.020 / LogL: -318.954
+Init pinv, alpha: 0.302, 1.000 / Estimate: 0.322, 0.020 / LogL: -318.347
+Init pinv, alpha: 0.403, 1.000 / Estimate: 0.415, 0.020 / LogL: -317.952
+Init pinv, alpha: 0.504, 1.000 / Estimate: 0.503, 0.059 / LogL: -317.827
+Init pinv, alpha: 0.604, 1.000 / Estimate: 0.602, 0.162 / LogL: -317.896
+Init pinv, alpha: 0.705, 1.000 / Estimate: 0.704, 0.320 / LogL: -318.067
+Init pinv, alpha: 0.806, 1.000 / Estimate: 0.808, 1.002 / LogL: -318.160
+Init pinv, alpha: 0.907, 1.000 / Estimate: 0.876, 998.440 / LogL: -317.830
+Optimal pinv,alpha: 0.503, 0.059 / LogL: -317.827
+
+Parameters optimization took 0.026 sec
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 0.019 second
+Computing log-likelihood of 2 initial trees ... 0.000 seconds
+Current best score: -317.827
+
+Do NNI search on 3 best initial trees
+Finish initializing candidate tree set (3)
+Current best tree score: -317.827 / CPU time: 0.023
+Number of iterations: 3
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -317.827
+Iteration 10 / LogL: -317.831 / Time: 0h:0m:0s
+UPDATE BEST LOG-LIKELIHOOD: -317.827
+Iteration 20 / LogL: -317.841 / Time: 0h:0m:0s
+Iteration 30 / LogL: -317.831 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 40 / LogL: -317.827 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 50 / LogL: -317.827 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 60 / LogL: -317.841 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 70 / LogL: -317.834 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 80 / LogL: -317.846 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 90 / LogL: -317.841 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 100 / LogL: -317.846 / Time: 0h:0m:0s (0h:0m:0s left)
+TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:0m:0s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -317.827
+Optimal log-likelihood: -317.826
+Rate parameters:  A-C: 1.11255  A-G: 23.69584  A-T: 1.11255  C-G: 1.00000  C-T: 31.46800  G-T: 1.00000
+Base frequencies:  A: 0.236  C: 0.182  G: 0.344  T: 0.238
+Proportion of invariable sites: 0.503
+Gamma shape alpha: 0.059
+Parameters optimization took 1 rounds (0.001 sec)
+BEST SCORE FOUND : -317.826
+Total tree length: 0.187
+
+Total number of iterations: 101
+CPU time used for tree search: 0.062 sec (0h:0m:0s)
+Wall-clock time used for tree search: 0.072 sec (0h:0m:0s)
+Total CPU time used: 0.103 sec (0h:0m:0s)
+Total wall-clock time used: 0.119 sec (0h:0m:0s)
+
+Analysis results written to: 
+  IQ-TREE report:                ./phylogeny_constraint/data/test_sequences.sepp.subtree.only.constrained.iqtree
+  Maximum-likelihood tree:       ./phylogeny_constraint/data/test_sequences.sepp.subtree.only.constrained.treefile
+  Screen log file:               ./phylogeny_constraint/data/test_sequences.sepp.subtree.only.constrained.log
+
+Date and Time: Wed Oct 10 08:42:04 2018
